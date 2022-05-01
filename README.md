@@ -28,8 +28,8 @@ pip install -r dev-requirements.txt
 mkdir build && cd build
 
 # Install conan dependencies for the specified build type
-conan install .. -s build_type=Debug
-# conan install .. -s build_type=Release
+conan install .. -s build_type=Debug --build=imgui --build=glfw
+# conan install .. -s build_type=Release --build=imgui --build=glfw
 
 # Generate build files for your preferred build system
 cmake .. -G Ninja
